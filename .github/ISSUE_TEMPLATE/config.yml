@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private technical support
+    url: https://www.kalmixtech.com/pages/contact
+    about: Use private support for credentials, private caster details, precise coordinates, or unredacted logs.
+  - name: Security report
+    url: mailto:service@kalmixtech.com
+    about: Report suspected vulnerabilities privately; do not open a public issue.
+

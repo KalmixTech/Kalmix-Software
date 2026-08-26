@@ -1,0 +1,62 @@
+name: Compatibility report
+description: Share a verified receiver and Windows compatibility result.
+title: "[Trace compatibility]: "
+labels:
+  - product:trace
+  - type:compatibility
+body:
+  - type: markdown
+    attributes:
+      value: Do not post NTRIP credentials, private caster details, precise coordinates, serial numbers, customer data, or unredacted logs.
+  - type: input
+    id: trace-version
+    attributes:
+      label: Trace version
+      placeholder: 1.5.7
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and architecture
+    validations:
+      required: true
+  - type: input
+    id: receiver
+    attributes:
+      label: Receiver model and firmware
+    validations:
+      required: true
+  - type: input
+    id: serial
+    attributes:
+      label: Serial interface and baud rate
+      placeholder: USB serial, COM17, 115200 baud
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verified functions
+      options:
+        - label: Serial port opens and NMEA data is readable
+        - label: NTRIP connection succeeds
+        - label: RTCM data is forwarded to the receiver
+        - label: Receiver-reported solution status updates
+        - label: Automatic reconnect works after a transient network failure
+        - label: Required logs are generated
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and limitations
+      description: Include the result, exact conditions, and anything that was not tested.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed credentials, private caster details, precise coordinates, serial numbers, customer data, and other secrets.
+          required: true
+

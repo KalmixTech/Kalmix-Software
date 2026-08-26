@@ -1,0 +1,80 @@
+name: Bug report
+description: Report a reproducible KALMIX software problem.
+title: "[Trace bug]: "
+labels:
+  - product:trace
+  - type:bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not post passwords, tokens, private caster details, precise coordinates, device serial numbers, customer names, or unredacted logs.
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - KALMIX Trace
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Trace version
+      placeholder: 1.5.7
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and architecture
+      placeholder: Windows 11 24H2, x64 host
+    validations:
+      required: true
+  - type: input
+    id: receiver
+    attributes:
+      label: Receiver model and firmware
+      placeholder: Model and firmware, if applicable
+  - type: input
+    id: interface
+    attributes:
+      label: Connection path
+      placeholder: USB serial, COM port, and baud rate; do not include private server details
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Provide the shortest repeatable sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      options:
+        - Every time
+        - Intermittent
+        - Once
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed credentials, private caster details, precise coordinates, serial numbers, customer data, and other secrets.
+          required: true
+
