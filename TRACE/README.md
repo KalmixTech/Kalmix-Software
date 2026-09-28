@@ -13,6 +13,16 @@ KALMIX Trace is a portable Windows GNSS serial monitor and NTRIP correction clie
 
 Download: [KALMIX Trace v1.5.7](https://github.com/KalmixTech/Kalmix-Software/releases/tag/trace-v1.5.7)
 
+## Install with WinGet
+
+On Windows, install the current release from the WinGet community repository:
+
+```powershell
+winget install --id KALMIX.Trace -e
+```
+
+The package installs as a portable app for the current user. No administrator privilege is required. After installation, start **KALMIX Trace** from the Start menu or run `kalmix-trace` in a new terminal session.
+
 ## Verify the download
 
 Official WinGet/direct EXE:
